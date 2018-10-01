@@ -1,21 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import { Switch, Route } from 'react-router-dom'
+import axios from 'axios'
 import './App.css';
+import LoginSite from "./components/sites/LoginSite/LoginSite";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+
+    state = {
+        currentTemperature: 0
+    }
+
+    getData = () => {
+        axios( {
+            method: 'get',
+            url: '10.183.71.254:8080/NeerMonitor/api/neer/hello',
+        } )
+            .then( function ( response ) {
+                console.log(response)
+            } ).catch(err => {
+                console.log(err)
+        });
+    }
+
+
+    render() {
+        return (
+            <div className="App">
+
+                <LoginSite/>
+
+                <h1>
+                    {this.state.currentTemperature} litres
+                </h1>
+                <button onClick={this.getData}>Testing</button>
+            </div>
+        );
+    }
 }
 
 export default App;
