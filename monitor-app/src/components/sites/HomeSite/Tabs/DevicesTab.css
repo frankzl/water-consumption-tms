@@ -1,0 +1,4 @@
+.devices-tab{
+    display: flex;
+    flex-wrap: wrap;
+}

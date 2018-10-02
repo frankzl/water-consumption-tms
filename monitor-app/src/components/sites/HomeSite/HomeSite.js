@@ -5,7 +5,8 @@ import Header from "../Header/Header";
 import LoginSite from "../LoginSite/LoginSite";
 import Route from "react-router-dom/es/Route";
 import Switch from "react-router-dom/es/Switch";
-import GraphView from "./GraphView";
+import GraphView from "./Tabs/GraphView/GraphView";
+import TabContainer from "./Tabs/TabContainer";
 
 
 class HomeSite extends Component {
@@ -14,13 +15,15 @@ class HomeSite extends Component {
 
             <div className="home-site">
                 <Header/>
-                <div>
-                    MyGraph here
+                <div className="home-site-content-wrapper">
+                    <div className="home-site-content">
+                        <Switch>
+                            <Route exact path='/' component={GraphView}/>
+                            <Route path='/login' component={LoginSite}/>
+                        </Switch>
+                        <TabContainer/>
+                    </div>
                 </div>
-                <Switch>
-                    <Route exact path='/' component={GraphView}/>
-                    <Route path='/login' component={LoginSite}/>
-                </Switch>
             </div>
         )
     }

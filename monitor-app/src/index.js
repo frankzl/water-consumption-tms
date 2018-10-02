@@ -18,6 +18,7 @@ const theme = createMuiTheme( {
             primary: blue,
             secondary: pink,
         },
+        shadows: ["none"]
     }
 );
 
