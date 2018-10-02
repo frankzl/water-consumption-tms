@@ -3,6 +3,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import CircularProgressbar from 'react-circular-progressbar';
 
 import './GraphView.css'
+import SegmentedProgressbar from "./SegmentedProgressbar";
 
 class GraphView extends Component {
 
@@ -13,10 +14,11 @@ class GraphView extends Component {
     render() {
         return (
             <div className="graph-view">
-                <CircularProgressbar
-                    text={this.state.percentage + 'L'}
-                    percentage={this.state.percentage}
-                />
+                <div style={{ width: '200px', height: '200px' }}>
+                    <SegmentedProgressbar
+                        text={this.state.percentage + ' L'}
+                        percentage={this.state.percentage} />
+                </div>
             </div>
         )
     }
