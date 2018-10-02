@@ -17,10 +17,9 @@ class GoalsTab extends Component {
 
     render() {
         return (
-
             <div className="goals-tab" style={{backgroundColor: '#f0f9fe' }}>
                 {this.state.goalList.map(
-                    (goal) => <GoalView checked={goal.checked} text={goal.text}/>
+                    (goal, idx) => <GoalView key={idx} checked={goal.checked} text={goal.text}/>
                 )}
             </div>
         )

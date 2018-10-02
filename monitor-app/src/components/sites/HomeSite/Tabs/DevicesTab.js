@@ -42,8 +42,8 @@ class DevicesTab extends Component {
 
             <div className="devices-tab">
                 {this.state.deviceList.map(
-                    (device) => {
-                        return <DeviceView name={device.name} total={device.total} limit={device.limit}/>
+                    (device, idx) => {
+                        return <DeviceView key={idx} name={device.name} total={device.total} limit={device.limit}/>
                     }
                 )}
             </div>

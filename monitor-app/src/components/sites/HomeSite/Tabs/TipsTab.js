@@ -23,8 +23,8 @@ class TipsTab extends Component {
 
     render() {
         const tips = this.state.tipList.map(
-            tip => {
-                return <TipView text={tip.text} type={tip.type}/>
+            (tip, idx) => {
+                return <TipView key={idx} text={tip.text} type={tip.type}/>
             }
         )
         return (

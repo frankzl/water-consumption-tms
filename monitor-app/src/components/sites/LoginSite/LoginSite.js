@@ -7,34 +7,48 @@ import Person from "@material-ui/icons/Person"
 import Lock from "@material-ui/icons/Lock"
 import Button from "@material-ui/core/es/Button/Button";
 
+import logo from '../../../assets/img/logo.png'
 
 class LoginSite extends Component {
+
+    state = {
+        username: '',
+        password: ''
+    }
+
+    handleInputChange = ( field, value ) => {
+        const newState = Object.assign( this.state, {} )
+        newState[ field ] = value
+        this.setState(
+            newState
+        )
+    }
+
     render() {
         return (
             <div className="login-site">
                 <div className="login-fields">
 
-                    <div className="login-logo">
-                        Logo HERE
-                    </div>
+                    <img src={logo} alt="neer-logo" style={{ maxWidth: '170px', marginBottom: '50px' }}/>
 
-                    <Grid container spacing={8} alignItems="flex-end">
-                        <Grid item>
-                            <Person/>
-                        </Grid>
-                        <Grid item>
-                            <TextField id="input-with-icon-grid" label="username"/>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={8} alignItems="flex-end">
-                        <Grid item>
-                            <Lock/>
-                        </Grid>
-                        <Grid item>
-                            <TextField id="input-with-icon-grid" label="password"/>
-                        </Grid>
-                    </Grid>
-                    <Button style={{marginTop: '25px'}} variant="contained" className="login-button" fullWidth="true" color="primary">Login</Button>
+                    <form noValidate autoComplete="off">
+                        <TextField
+                            id="standard-name"
+                            label="username"
+                            value={this.state.name}
+                            onChange={(event)=>this.handleInputChange( 'username', event.value )}
+                            margin="normal"
+                        />
+                        <TextField
+                            id="standard-uncontrolled"
+                            label="password"
+                            type="password"
+                            value={this.state.password}
+                            margin="normal"
+                        />
+                    </form>
+                    <Button style={{ marginTop: '25px' }} variant="contained" className="login-button" fullWidth="true"
+                            color="primary">Login</Button>
                 </div>
             </div>
         )

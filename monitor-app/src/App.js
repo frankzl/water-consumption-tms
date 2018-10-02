@@ -12,19 +12,6 @@ class App extends Component {
         currentTemperature: 0
     }
 
-    httpGet = ( theUrl ) => {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-        xmlHttp.send( null );
-        return xmlHttp.responseText;
-    }
-
-    httpPost = ( theUrl ) => {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", theUrl, false ); // false for synchronous request
-        xmlHttp.send( null );
-        return xmlHttp.responseText;
-    }
 
     getData = () => {
         const temp = this.httpGet( 'http://10.183.71.254:8080/NeerMonitor/api/neer/hello' )
