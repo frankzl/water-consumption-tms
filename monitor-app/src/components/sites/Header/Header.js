@@ -6,7 +6,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import ExitIcon from '@material-ui/icons/ExitToApp';
+import Link from "react-router-dom/es/Link";
 
 const styles = {
     root: {
@@ -21,20 +22,22 @@ const styles = {
     },
 };
 
-function ButtonAppBar(props) {
+function ButtonAppBar( props ) {
     const { classes } = props;
     return (
-            <AppBar position="static">
-                <Toolbar>
+        <AppBar position="static">
+            <Toolbar>
+                <Typography variant="title" color="inherit" className={classes.grow}>
+                    Today
+                </Typography>
+                <Link to="/login" style={{color: 'white'}}>
                     <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-                        <MenuIcon />
+                        <ExitIcon/>
                     </IconButton>
-                    <Typography variant="title" color="inherit" className={classes.grow}>
-                        Today
-                    </Typography>
-                    <Button color="inherit">Login</Button>
-                </Toolbar>
-            </AppBar>
+                </Link>
+
+            </Toolbar>
+        </AppBar>
     );
 }
 
@@ -42,4 +45,4 @@ ButtonAppBar.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ButtonAppBar);
+export default withStyles( styles )( ButtonAppBar );

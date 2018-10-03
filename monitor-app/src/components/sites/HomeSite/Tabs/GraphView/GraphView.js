@@ -22,7 +22,7 @@ class GraphView extends Component {
         })
     }
 
-    int = setInterval(this.statCh, 500)
+    //int = setInterval(this.statCh, 500)
 
     render() {
         return (

@@ -7,7 +7,7 @@ class DevicesTab extends Component {
     state = {
         deviceList: [
             {
-                name: 'shower',
+                name: 'shower downstairs',
                 total: 10.4,
                 limit: 11
             },
@@ -16,22 +16,22 @@ class DevicesTab extends Component {
                 total: 1.4,
                 limit: 12
             },{
-                name: 'shower',
-                total: 20.4,
+                name: 'garden',
+                total: 100.3,
                 limit: 12
             },
             {
-                name: 'tap-kitchen',
+                name: 'shower upstairs',
                 total: 5.4,
                 limit: 12
             },{
-                name: 'shower',
-                total: 20.4,
+                name: 'tap bathroom',
+                total: 10.4,
                 limit: 12
             },
             {
                 name: 'tap-kitchen',
-                total: 5.4,
+                total: 35.4,
                 limit: 12
             },
         ]

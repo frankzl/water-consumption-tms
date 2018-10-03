@@ -105,8 +105,10 @@ class HomeSite extends Component {
                             <Route path='/login' component={LoginSite}/>
                         </Switch>
                         <TabContainer devices={this.state.devices}/>
+
                         <Button onClick={() => this.getDayOutput( 'asdf', new Date() )}>GetOutputToday</Button>
                         <Button onClick={() => this.getDevices()}>GetDevices</Button>
+
                     </div>
                 </div>
             </div>
