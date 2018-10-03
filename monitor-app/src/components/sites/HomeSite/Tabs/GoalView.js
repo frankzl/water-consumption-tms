@@ -11,6 +11,9 @@ const styles = {
             color: green[ 500 ],
         },
     },
+    label: {
+        color: 'rgba(0, 0, 0, 0.6)'
+    },
     checked: {},
 };
 
@@ -19,6 +22,9 @@ const goalView = ( props ) => {
     return ( <div style={{ display: 'flex' }}>
         <div style={{padding: '10px'}}>
             <FormControlLabel
+                classes={{
+                    label: classes.label
+                }}
                 control={
                     <Checkbox
                         checked={true}

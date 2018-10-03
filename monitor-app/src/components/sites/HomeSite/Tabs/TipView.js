@@ -15,7 +15,7 @@ const styles = theme => ( {
 function tipView( props ) {
 
     return (
-        <div style={{padding: '15px', borderBottom: '1px #d5d5d5 solid', color: 'rgba(0, 0, 0, 0.8)', fontSize: '13px'}}>
+        <div style={{padding: '15px', borderBottom: '1px #d5d5d5 solid', color: 'rgba(0, 0, 0, 0.6)', fontSize: '13px'}}>
                 {props.text}
         </div>
     );

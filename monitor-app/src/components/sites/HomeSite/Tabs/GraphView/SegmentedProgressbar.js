@@ -91,15 +91,36 @@ const styles = {    // Customize the root svg element
 
 }
 
+const getColor = (percentage) => {
+    let r = 0;
+    let g = 200;
+    let b = 255;
+
+    r = r + (255*percentage)/100
+    g = g - (200*percentage)/100
+    b = b - (255*percentage)/100
+
+    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+
+}
+
 function SegmentedProgressbar(props) {
+
+    const percentage = props.liters*100/props.limit
+
+    const col = getColor(percentage)
+
+    styles['path']['stroke'] = col
+
+
     return (
         <LayeredProgressbar
-            percentage={props.percentage}
+            percentage={percentage}
             styles={styles}
             renderOverlays={() =>
                 getRadialSeparators(20).concat(
-                    <div style={{ fontSize: 37, fontWeight: 'bold',  color: '#2196f3' }}>
-                        {props.percentage}%
+                    <div style={{ fontSize: 40, fontWeight: 'bold',  color: col }}>
+                        {props.liters}<div style={{fontSize: 12}}>liter</div>
                     </div>,
                 )
             }
