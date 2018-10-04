@@ -106,7 +106,14 @@ const getColor = (percentage) => {
 
 function SegmentedProgressbar(props) {
 
-    const percentage = props.liters*100/props.limit
+    let percentage = props.liters*100/props.limit
+
+    if(props.liters > props.limit){
+        percentage = 100
+    }
+    console.log('per',props.limit)
+
+    console.log('per',percentage)
 
     const col = getColor(percentage)
 

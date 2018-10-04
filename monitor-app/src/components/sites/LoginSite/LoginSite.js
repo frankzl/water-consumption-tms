@@ -26,16 +26,26 @@ class LoginSite extends Component {
 
     handleLogin = () =>{
         const uname = this.state.username
-        console.log('handlelogin', uname)
-        this.props.update(uname, new Date());
+        const date = new Date()
+        date.setHours(0,0,0,0)
+
+        console.log('date',date)
+
+        const yesterday = new Date()
+        yesterday.setDate(date.getDate() - 1)
+        console.log('da---',yesterday)
+
+        this.props.update(uname, date);
+        this.props.update(uname, yesterday);
         this.props.onLogin( uname );
+        let int = setInterval(()=>this.props.update(uname, date), 2000)
+
     }
 
     render() {
         return (
             <div className="login-site">
                 <div className="login-fields">
-
                     <img src={logo} alt="neer-logo" style={{ marginTop:'50px', maxWidth: '170px', marginBottom: '50px' }}/>
                     <TextField
                         id="standard-name"

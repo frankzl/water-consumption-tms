@@ -79,9 +79,14 @@ class DevicesTab extends Component {
         } );
 
         let deviceView = []
+
+        const toD = new Date()
+        const fromD = new Date(toD.getDate()-6)
+
         for ( let device in this.props.devices ) {
             deviceView.push(
                 <DeviceView key={device}
+                            loadDevice={()=>this.props.loadDevice(device, fromD, toD)}
                             redirect={()=>this.redirectTo(device)}
                             name={this.props.devices[ device ].name}
                             total={this.props.devices[ device ].total}
@@ -114,7 +119,8 @@ const mapStateToProps = ( state ) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        update: ( id ) => dispatch(actionTypes.getDevices(id))
+        update: ( id ) => dispatch(actionTypes.getDevices(id)),
+        loadDevice: (id, fromD, toD) => dispatch(actionTypes.getDeviceData(id, fromD, toD))
     }
 }
 export default connect( mapStateToProps, mapDispatchToProps )( withRouter(DevicesTab ))

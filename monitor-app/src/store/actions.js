@@ -1,7 +1,8 @@
 export const LOGIN = 'LOGIN';
 
 export const UPDATE_TOTAL = 'UPDATE_TOTAL';
-export const UPDATE_DEVICES = 'UPDATE_DEVICES'
+export const UPDATE_DEVICES = 'UPDATE_DEVICES';
+export const UPDATE_DEVICE_DATA = 'UPDATE_DEVICE_DATA';
 
 
 const serverAPI = 'http://35.198.75.55:8080/NeerMonitor/api/neer/'
@@ -10,7 +11,6 @@ const httpGetAsync = ( theUrl, callback ) => {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function () {
         if ( xmlHttp.readyState == 4 && xmlHttp.status == 200 ) {
-            console.log( xmlHttp.responseText );
             if ( callback ) {
                 callback( xmlHttp.responseText )
             }
@@ -20,7 +20,7 @@ const httpGetAsync = ( theUrl, callback ) => {
     xmlHttp.send( null );
 }
 
-const updateTotal = (total, date) => {
+const updateTotal = ( total, date ) => {
     return {
         type: UPDATE_TOTAL,
         val: total,
@@ -45,31 +45,46 @@ const dateToString = ( date ) => {
 }
 
 export const getTotal = ( userId, date ) => {
-    console.log('uid')
-    console.log(userId)
-    return (dispatch) => {
-        httpGetAsync( serverAPI + 'getTotalConsumption?userId='+userId+'&date='+dateToString(date),
+    return ( dispatch ) => {
+        httpGetAsync( serverAPI + 'getTotalConsumption?userId=' + userId + '&date=' + dateToString( date ),
             ( responseText ) => {
                 const obj = JSON.parse( "" + responseText );
-                console.log('response: ',responseText)
-                dispatch(updateTotal(parseInt(obj.message), date))
+                dispatch( updateTotal( parseInt( obj.message ), dateToString( date ) ) )
             } )
     }
 }
 
-const updateDevices = (deviceDict) => {
+const updateDevices = ( deviceDict ) => {
     return {
         type: UPDATE_DEVICES,
         val: deviceDict
     }
 }
 
-export const getDevices = (userId) => {
-    return (dispatch) => {
-        httpGetAsync( serverAPI + 'getDevices?userId='+userId,
+export const getDevices = ( userId ) => {
+    return ( dispatch ) => {
+        httpGetAsync( serverAPI + 'getDevices?userId=' + userId,
             ( responseText ) => {
                 const obj = JSON.parse( "" + responseText );
-                dispatch(updateDevices(obj))
+                dispatch( updateDevices( obj ) )
+            } )
+    }
+}
+
+const updateDeviceData = (data) => {
+    return {
+        type: UPDATE_DEVICE_DATA,
+        val: data
+    }
+}
+
+export const getDeviceData = ( deviceId, fromD, toD ) => {
+    return ( dispatch ) => {
+        httpGetAsync( serverAPI + 'getDeviceData?deviceId=' +
+            deviceId + '&fdate=' + dateToString( fromD ) + '&tdate=' + dateToString( toD ),
+            ( responseText ) => {
+                const obj = JSON.parse( "" + responseText );
+                dispatch( updateDeviceData( obj ) )
             } )
     }
 }

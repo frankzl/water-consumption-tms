@@ -8,7 +8,9 @@ import * as actionTypes from "../../../../../store/actions";
 
 class GraphView extends Component {
 
-    //int = setInterval(this.statCh, 500)
+    constructor (props){
+        super(props)
+    }
 
     render() {
         return (
@@ -23,10 +25,32 @@ class GraphView extends Component {
     }
 }
 
+const dateToString = ( date ) => {
+    let dd = date.getDate();
+    let mm = date.getMonth() + 1; //January is 0!
+    const yyyy = date.getFullYear();
+
+    if ( dd < 10 ) {
+        dd = '0' + dd
+    }
+
+    if ( mm < 10 ) {
+        mm = '0' + mm
+    }
+
+    return yyyy + '-' + mm + '-' + dd;
+}
 const mapStateToProps = (state)=> {
+    const date = new Date()
+    const yesterday = new Date()
+    yesterday.setDate(date.getDate() - 1)
+    let limit = state[dateToString(yesterday)]
+    if(!limit){
+        limit = 1
+    }
     return {
-        liters: state.totalToday,
-        limit: state.limitToday,
+        liters: state[dateToString(date)],
+        limit: limit,
         userId: state.userId
     }
 }
