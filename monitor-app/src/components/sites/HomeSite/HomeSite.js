@@ -9,13 +9,12 @@ import GraphView from "./Tabs/GraphView/GraphView";
 import TabContainer from "./Tabs/TabContainer";
 import Button from "@material-ui/core/es/Button/Button";
 
-import axios from 'axios'
+import { connect } from "react-redux";
 
 class HomeSite extends Component {
 
     state = {
-        userId: 'mrlu123',
-        serverAPI: 'http://192.168.1.74:8080/NeerMonitor/api/neer/',
+        //userId: 'mrlu123',
         devices: {}
     }
 
@@ -37,7 +36,7 @@ class HomeSite extends Component {
     }
 
     getDevices = () => {
-        this.httpGetAsync( this.state.serverAPI + 'getDevices?userId=' + this.state.userId,
+        this.httpGetAsync( this.state.serverAPI + 'getDevices?userId=' + this.props.userId,
             ( responseText ) => {
                 const array = JSON.parse( "[" + responseText + "]" );
                 this.initDevices( array )
@@ -51,7 +50,7 @@ class HomeSite extends Component {
             '&fdate=' + dayStr + '&tdate=' + dayStr,
             ( responseText ) => {
                 let updatedDevices = Object.assign( {}, this.state.devices )
-                console.log(responseText)
+                console.log( responseText )
                 //updatedDevices[deviceId][dayStr] =
             } )
     }
@@ -93,6 +92,12 @@ class HomeSite extends Component {
         return xmlHttp.responseText;
     }
 
+    componentWillMount(){
+        if ( this.props.userId == '' ) {
+            this.props.history.push( '/login' )
+        }
+    }
+
     render() {
         return (
 
@@ -100,10 +105,7 @@ class HomeSite extends Component {
                 <Header/>
                 <div className="home-site-content-wrapper">
                     <div className="home-site-content">
-                        <Switch>
-                            <Route exact path='/' component={GraphView}/>
-                            <Route path='/login' component={LoginSite}/>
-                        </Switch>
+                        <GraphView/>
                         <TabContainer devices={this.state.devices}/>
 
                         <Button onClick={() => this.getDayOutput( 'asdf', new Date() )}>GetOutputToday</Button>
@@ -116,4 +118,10 @@ class HomeSite extends Component {
     }
 }
 
-export default HomeSite
+const mapStateToProps = state => {
+    return {
+        userId: state.username
+    }
+}
+
+export default connect( mapStateToProps )( HomeSite )

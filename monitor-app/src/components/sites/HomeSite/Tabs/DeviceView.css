@@ -6,11 +6,12 @@
 
 .device-view-inner {
     padding: 20px 5px 20px 5px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
-
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: rgba(0,0,0,.2);
+    width: 100%;
 }
+
 
 .device-name {
     color: rgba(0, 0, 0, 0.54);
@@ -20,11 +21,13 @@
     font-size: 13px;
 }
 
-.total-font{
+.total-font {
     font-size: 25px;
+    color: rgba(0,0,0,0.7);
 }
 
-.unit-font{
+
+.unit-font {
     margin-left: 5px;
     color: rgba(0, 0, 0, 0.54);
 }

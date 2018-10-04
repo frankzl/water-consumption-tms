@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 
 import './LoginSite.css';
-import Grid from "@material-ui/core/es/Grid/Grid";
 import TextField from "@material-ui/core/es/TextField/TextField";
-import Person from "@material-ui/icons/Person"
-import Lock from "@material-ui/icons/Lock"
 import Button from "@material-ui/core/es/Button/Button";
 
 import logo from '../../../assets/img/logo.png'
 import Link from "react-router-dom/es/Link";
 import { connect } from "react-redux";
+
+import * as actionTypes from '../../../store/actions'
 
 class LoginSite extends Component {
 
@@ -58,19 +57,13 @@ class LoginSite extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        ctr: state.username
-    }
-}
-
 const mapDispatchToProps = dispatch => {
     return {
         onLogin: ( id ) => dispatch( {
-            type: 'LOGIN',
+            type: actionTypes.LOGIN,
             username: id
         } )
     }
 }
 
-export default connect( mapStateToProps, mapDispatchToProps )( LoginSite )
+export default connect( null, mapDispatchToProps )( LoginSite )

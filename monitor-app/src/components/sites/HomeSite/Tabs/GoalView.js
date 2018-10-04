@@ -19,7 +19,7 @@ const styles = {
 
 const goalView = ( props ) => {
     const { classes } = props
-    return ( <div style={{ display: 'flex' }}>
+    return ( <div style={{ display: 'flex', borderBottom: '1px solid #ccc' }}>
         <div style={{padding: '10px'}}>
             <FormControlLabel
                 classes={{

@@ -5,6 +5,7 @@ import axios from 'axios'
 import './App.css';
 import LoginSite from "./components/sites/LoginSite/LoginSite";
 import HomeSite from "./components/sites/HomeSite/HomeSite";
+import StatSite from "./components/sites/StatSite/StatSite";
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path='/' component={HomeSite}/>
                     <Route path='/login' component={LoginSite}/>
+                    <Route path='/device/:id' component={StatSite}/>
                 </Switch>
                 {/**
                  <h1>

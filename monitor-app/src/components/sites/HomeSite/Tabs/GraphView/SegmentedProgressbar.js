@@ -120,7 +120,8 @@ function SegmentedProgressbar(props) {
             renderOverlays={() =>
                 getRadialSeparators(20).concat(
                     <div style={{ fontSize: 40, fontWeight: 'bold',  color: col }}>
-                        {props.liters}<div style={{fontSize: 12}}>liter</div>
+                        {props.liters}<div style={{fontSize: 12, marginLeft: 41, marginTop: 5,
+                    color: 'rgba(0,0,0,0.5)'}}>/ {props.limit} liter</div>
                     </div>,
                 )
             }

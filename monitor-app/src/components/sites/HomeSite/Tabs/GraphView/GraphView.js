@@ -4,6 +4,7 @@ import CircularProgressbar from 'react-circular-progressbar';
 
 import './GraphView.css'
 import SegmentedProgressbar from "./SegmentedProgressbar";
+import { connect } from "react-redux";
 
 class GraphView extends Component {
 
@@ -29,14 +30,19 @@ class GraphView extends Component {
             <div className="graph-view">
                 <div style={{ width: '200px', height: '200px' }}>
                     <SegmentedProgressbar
-                        text={this.state.percentage + ' L'}
-                        liters={this.state.liters}
-                        limit={this.state.limit} />
+                        liters={this.props.liters}
+                        limit={this.props.limit} />
                 </div>
             </div>
         )
     }
 }
 
+const mapStateToProps = (state)=> {
+    return {
+        liters: state.totalToday,
+        limit: state.limitToday
+    }
+}
 
-export default GraphView
+export default connect(mapStateToProps)(GraphView)
