@@ -15,7 +15,7 @@ class StatSite extends React.Component {
         const theme = createMuiTheme();
 
         return ( <div>
-            <DeviceHeader title={this.props.match.params.id}/>
+            <DeviceHeader title={this.props.devices[this.props.match.params.id].name}/>
             <div className="home-site-content-wrapper" style={{ flexDirection: 'column', alignItems: 'center' }}>
                 <div className="home-site-content" style={{ padding: '10px', width: '100%' }}>
                     <MuiThemeProvider theme={theme}>
@@ -26,7 +26,7 @@ class StatSite extends React.Component {
                 <div className="total-usage">
                     <div style={{ fontWeight: 'bold' }}>Total Usage</div>
                     <div style={{ marginTop: '10px', fontSize: '35px', fontWeight: 'bold' }}>
-                        {this.props.devices[this.props.match.params.id].total}
+                        {Math.round(this.props.devices[this.props.match.params.id].total*100)/100}
                     </div>
                     <div style={{ fontSize: '12px', fontWeight: 'bold' }}>
                         your goal: {this.props.devices[this.props.match.params.id].limit}

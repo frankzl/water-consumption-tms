@@ -11,11 +11,14 @@ import createMuiTheme from "@material-ui/core/es/styles/createMuiTheme";
 import blue from "@material-ui/core/es/colors/blue";
 import pink from "@material-ui/core/es/colors/pink";
 
-import {createStore} from 'redux'
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import reducer from './store/reducer'
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
 
-const store = createStore(reducer);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore( reducer, composeEnhancers( applyMiddleware( thunk ) ) );
 
 
 const theme = createMuiTheme( {
@@ -23,13 +26,13 @@ const theme = createMuiTheme( {
             primary: blue,
             secondary: pink,
         },
-        shadows: ["none"]
+        shadows: Array( 25 ).fill( 'none' )
     }
 );
 
-store.subscribe(()=>{
-    console.log(store.getState())
-})
+store.subscribe( () => {
+    console.log( store.getState() )
+} )
 
 ReactDOM.render(
     <BrowserRouter>

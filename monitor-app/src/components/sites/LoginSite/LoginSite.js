@@ -24,12 +24,19 @@ class LoginSite extends Component {
         })
     }
 
+    handleLogin = () =>{
+        const uname = this.state.username
+        console.log('handlelogin', uname)
+        this.props.update(uname, new Date());
+        this.props.onLogin( uname );
+    }
+
     render() {
         return (
             <div className="login-site">
                 <div className="login-fields">
 
-                    <img src={logo} alt="neer-logo" style={{ maxWidth: '170px', marginBottom: '50px' }}/>
+                    <img src={logo} alt="neer-logo" style={{ marginTop:'50px', maxWidth: '170px', marginBottom: '50px' }}/>
                     <TextField
                         id="standard-name"
                         label="username"
@@ -45,7 +52,7 @@ class LoginSite extends Component {
                         onChange={this.handleChange('password')}
                         margin="normal"
                     />
-                    <Link onClick={() => this.props.onLogin( this.state.username )}
+                    <Link onClick={this.handleLogin}
                           to="/" style={{ color: 'white' }}>
                         <Button style={{ marginTop: '25px' }} variant="contained" className="login-button"
                                 fullWidth={true}
@@ -62,7 +69,8 @@ const mapDispatchToProps = dispatch => {
         onLogin: ( id ) => dispatch( {
             type: actionTypes.LOGIN,
             username: id
-        } )
+        } ),
+        update: ( id, date ) => dispatch(actionTypes.getTotal(id, date))
     }
 }
 

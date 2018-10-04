@@ -43,33 +43,6 @@ class HomeSite extends Component {
             } )
     }
 
-    getDayOutput = ( deviceId, date ) => {
-        console.log( this.state )
-        const dayStr = this.dateToString( date )
-        this.httpGetAsync( this.state.serverAPI + 'getTimedDeviceUsage?deviceId=' + deviceId +
-            '&fdate=' + dayStr + '&tdate=' + dayStr,
-            ( responseText ) => {
-                let updatedDevices = Object.assign( {}, this.state.devices )
-                console.log( responseText )
-                //updatedDevices[deviceId][dayStr] =
-            } )
-    }
-
-    dateToString = ( date ) => {
-        let dd = date.getDate();
-        let mm = date.getMonth() + 1; //January is 0!
-        const yyyy = date.getFullYear();
-
-        if ( dd < 10 ) {
-            dd = '0' + dd
-        }
-
-        if ( mm < 10 ) {
-            mm = '0' + mm
-        }
-
-        return yyyy + '-' + mm + '-' + dd;
-    }
 
     httpGetAsync = ( theUrl, callback ) => {
         var xmlHttp = new XMLHttpRequest();
@@ -107,10 +80,6 @@ class HomeSite extends Component {
                     <div className="home-site-content">
                         <GraphView/>
                         <TabContainer devices={this.state.devices}/>
-
-                        <Button onClick={() => this.getDayOutput( 'asdf', new Date() )}>GetOutputToday</Button>
-                        <Button onClick={() => this.getDevices()}>GetDevices</Button>
-
                     </div>
                 </div>
             </div>

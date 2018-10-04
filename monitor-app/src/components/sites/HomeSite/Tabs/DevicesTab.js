@@ -9,6 +9,7 @@ import Button from "@material-ui/core/es/Button/Button";
 import AddIcon from '@material-ui/icons/Add'
 import PopUp from "./PopUp";
 import { withRouter } from "react-router-dom";
+import * as actionTypes from "../../../../store/actions";
 class DevicesTab extends Component {
 
     state = {
@@ -57,6 +58,11 @@ class DevicesTab extends Component {
         this.props.history.push('/device/'+deviceId)
     }
 
+    componentDidMount(){
+        console.log('looo', this.props.userId)
+        this.props.update(this.props.userId)
+    }
+
     render() {
 
         const style = {
@@ -101,9 +107,15 @@ class DevicesTab extends Component {
 
 const mapStateToProps = ( state ) => {
     return {
-        devices: state.devices
+        devices: state.devices,
+        userId: state.username
     }
 }
 
-export default connect( mapStateToProps )( withRouter(DevicesTab ))
+const mapDispatchToProps = dispatch => {
+    return {
+        update: ( id ) => dispatch(actionTypes.getDevices(id))
+    }
+}
+export default connect( mapStateToProps, mapDispatchToProps )( withRouter(DevicesTab ))
 

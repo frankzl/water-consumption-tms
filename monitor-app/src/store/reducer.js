@@ -46,6 +46,13 @@ const reducer = ( state = initialState, action ) => {
         case actionTypes.LOGIN:
             newState = { ...state, username: action.username };
             break;
+        case actionTypes.UPDATE_TOTAL:
+            console.log("yo", action.val)
+            newState = { ...state, totalToday: action.val };
+            break;
+        case actionTypes.UPDATE_DEVICES:
+            newState = { ...state, devices: action.val}
+            break;
         default:
             newState = { ...state };
     }

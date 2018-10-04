@@ -1,27 +1,12 @@
 import React, { Component } from 'react'
 import 'react-circular-progressbar/dist/styles.css';
-import CircularProgressbar from 'react-circular-progressbar';
 
 import './GraphView.css'
 import SegmentedProgressbar from "./SegmentedProgressbar";
 import { connect } from "react-redux";
+import * as actionTypes from "../../../../../store/actions";
 
 class GraphView extends Component {
-
-    state = {
-        percentage: 0,
-        liters: 0,
-        limit: 128
-    }
-
-    statCh = () =>{
-        let p = this.state.liters
-        p = p+1
-        console.log('yo' + p)
-        this.setState({
-            liters: p+1
-        })
-    }
 
     //int = setInterval(this.statCh, 500)
 
@@ -41,8 +26,15 @@ class GraphView extends Component {
 const mapStateToProps = (state)=> {
     return {
         liters: state.totalToday,
-        limit: state.limitToday
+        limit: state.limitToday,
+        userId: state.userId
     }
 }
 
-export default connect(mapStateToProps)(GraphView)
+const mapDispatchToProps = dispatch => {
+    return {
+        update: ( id ) => dispatch(actionTypes.getTotal(id, new Date()))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(GraphView)

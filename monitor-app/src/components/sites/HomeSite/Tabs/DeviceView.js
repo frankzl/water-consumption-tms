@@ -17,7 +17,7 @@ const deviceView = ( props ) => {
                 {props.name}
             </div>
             <span className="total-font">
-                {props.total}
+                {Math.round(props.total*100)/100}
             </span>
             <span className="unit-font">
                 L

@@ -25,20 +25,26 @@ function DeviceHeader( props ) {
     const { classes } = props;
     return (
         <AppBar position="static">
-            <Toolbar>
+            <Toolbar style={{ position: 'relative' }}>
+                <Typography variant="title" color="inherit" className={classes.grow}
+                            style={{
+                                position: 'absolute', left: 0, right: 0, marginRight: 'auto',
+                                marginLeft: 'auto'
+                            }}
+                >
 
+                    {props.title}
+                </Typography>
                 <Link to="/" style={{ color: 'white' }}>
                     <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
                         <BackIcon/>
                     </IconButton>
                 </Link>
-                <Typography variant="title" color="inherit" className={classes.grow}>
-                    {props.title}
-                </Typography>
             </Toolbar>
         </AppBar>
     );
 }
+
 
 DeviceHeader.propTypes = {
     classes: PropTypes.object.isRequired,
