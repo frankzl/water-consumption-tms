@@ -2,14 +2,12 @@ import React, { Component } from 'react'
 import DeviceView from "./DeviceView";
 import "./DevicesTab.css"
 import { connect } from "react-redux";
-import MuiThemeProvider from "@material-ui/core/es/styles/MuiThemeProvider";
-import green from "@material-ui/core/es/colors/green";
-import createMuiTheme from "@material-ui/core/es/styles/createMuiTheme";
-import Button from "@material-ui/core/es/Button/Button";
 import AddIcon from '@material-ui/icons/Add'
 import PopUp from "./PopUp";
 import { withRouter } from "react-router-dom";
 import * as actionTypes from "../../../../store/actions";
+import { Button, MuiThemeProvider } from "@material-ui/core/umd/material-ui.production.min";
+import createMuiTheme from "@material-ui/core/es/styles/createMuiTheme";
 class DevicesTab extends Component {
 
     state = {
