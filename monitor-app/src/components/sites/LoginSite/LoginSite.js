@@ -38,8 +38,12 @@ class LoginSite extends Component {
         this.props.update(uname, date);
         this.props.update(uname, yesterday);
         this.props.onLogin( uname );
-        let int = setInterval(()=>this.props.update(uname, date), 2000)
-
+        if(!this.state.interval) {
+            this.state.interval = setInterval( () => {
+                this.props.update( uname, date )
+                this.props.updateDeviceTab( uname )
+            }, 1000 )
+        }
     }
 
     render() {
@@ -80,7 +84,9 @@ const mapDispatchToProps = dispatch => {
             type: actionTypes.LOGIN,
             username: id
         } ),
-        update: ( id, date ) => dispatch(actionTypes.getTotal(id, date))
+        update: ( id, date ) => dispatch(actionTypes.getTotal(id, date)),
+        loadDevice: (id, fromD, toD) => dispatch(actionTypes.getDeviceData(id, fromD, toD)),
+        updateDeviceTab: ( id ) => dispatch(actionTypes.getDevices(id))
     }
 }
 

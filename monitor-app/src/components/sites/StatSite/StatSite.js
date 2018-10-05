@@ -7,9 +7,12 @@ import MuiThemeProvider from "@material-ui/core/es/styles/MuiThemeProvider";
 import './StatSite.css'
 import connect from "react-redux/es/connect/connect";
 import BarChart from "./BarChart";
-import { withRouter } from "react-router-dom";
 
 class StatSite extends React.Component {
+
+    state = {
+        weightRange: 'WEEK'
+    }
 
     render() {
         const theme = createMuiTheme();
@@ -32,7 +35,7 @@ class StatSite extends React.Component {
                         your goal: {this.props.devices[this.props.match.params.id].limit}
                         <span style={{ marginLeft: '5px' }}>liters</span>
                     </div>
-                    <BarChart/>
+                    <BarChart data={this.props.deviceData}/>
                 </div>
             </div>
         </div> )
@@ -43,7 +46,8 @@ class StatSite extends React.Component {
 const mapStateToProps = ( state ) => {
     return {
         totalToday: state.totalToday,
-        devices: state.devices
+        devices: state.devices,
+        deviceData: state.deviceData
     }
 }
 

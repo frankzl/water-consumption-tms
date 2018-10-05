@@ -21,6 +21,8 @@ const httpGetAsync = ( theUrl, callback ) => {
 }
 
 const updateTotal = ( total, date ) => {
+    console.log( 'total', total )
+    console.log( 'date', date )
     return {
         type: UPDATE_TOTAL,
         val: total,
@@ -71,11 +73,18 @@ export const getDevices = ( userId ) => {
     }
 }
 
-const updateDeviceData = (data) => {
+const updateDeviceData = ( data ) => {
     return {
         type: UPDATE_DEVICE_DATA,
         val: data
     }
+}
+
+const remapDeviceData = ( array ) => {
+    const remapped = array.map( ( dataPoint, idx ) => {
+        return { x: idx, y: dataPoint.total }
+    } )
+    return remapped
 }
 
 export const getDeviceData = ( deviceId, fromD, toD ) => {
@@ -84,7 +93,9 @@ export const getDeviceData = ( deviceId, fromD, toD ) => {
             deviceId + '&fdate=' + dateToString( fromD ) + '&tdate=' + dateToString( toD ),
             ( responseText ) => {
                 const obj = JSON.parse( "" + responseText );
-                dispatch( updateDeviceData( obj ) )
+                console.log( "------------" )
+                console.log( obj )
+                dispatch( updateDeviceData( remapDeviceData( obj ) ) )
             } )
     }
 }

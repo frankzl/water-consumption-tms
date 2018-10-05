@@ -37,8 +37,18 @@ const initialState = {
             total: 35.4,
             limit: 12
         },
-    }
+    },
+
+    deviceData: []
 }
+
+const data = []
+
+for ( let x = 1; x <= 30; x++ ) {
+    data.push( { x: x, y: Math.floor( Math.random() * 100 ) } )
+}
+
+initialState.deviceData = data
 
 const reducer = ( state = initialState, action ) => {
     let newState = {}

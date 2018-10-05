@@ -31,12 +31,12 @@ const styles = theme => ({
 
 const ranges = [
     {
-        value: 'HOUR',
-        label: 'Hour',
-    },
-    {
         value: 'DAY',
         label: 'Day',
+    },
+    {
+        value: 'WEEK',
+        label: 'Week',
     },
     {
         value: 'MONTH',
@@ -50,7 +50,7 @@ const ranges = [
 
 class RangeControl extends React.Component {
     state = {
-        weightRange: 'HOUR',
+        weightRange: 'WEEK',
     };
 
     handleChange = prop => event => {

@@ -55,6 +55,11 @@ class DevicesTab extends Component {
     };
 
     redirectTo = (deviceId) => {
+        const today = new Date()
+        const lastweek = new Date()
+        lastweek.setDate( today.getDate() - 7)
+
+        this.props.loadDevice(deviceId, lastweek, today)
         this.props.history.push('/device/'+deviceId)
     }
 
@@ -81,7 +86,11 @@ class DevicesTab extends Component {
         let deviceView = []
 
         const toD = new Date()
-        const fromD = new Date(toD.getDate()-6)
+        const fromD = new Date()
+        fromD.setDate(toD.getDate() - 6)
+
+        console.log(toD.toDateString())
+        console.log(fromD.toDateString())
 
         for ( let device in this.props.devices ) {
             deviceView.push(
