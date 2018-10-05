@@ -65,6 +65,15 @@ const reducer = ( state = initialState, action ) => {
         case actionTypes.UPDATE_DEVICE_DATA:
             newState = { ...state, deviceData: action.val}
             break;
+        case actionTypes.ADD_DEVICE:
+            const devices = {...state.devices}
+            devices[action.id] = {
+                name: action.name,
+                total: 0,
+                limit: action.limit
+            }
+            newState = {...state, devices: devices}
+            break;
         default:
             newState = { ...state };
     }

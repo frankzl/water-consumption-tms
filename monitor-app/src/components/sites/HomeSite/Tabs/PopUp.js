@@ -59,7 +59,7 @@ class PopUp extends React.Component {
                             <Button variant="contained" color="primary" onClick={this.props.onClose} color="primary">
                                 Cancel
                             </Button>
-                            <Button variant="contained" onClick={this.props.onClose} color="primary">
+                            <Button variant="contained" onClick={()=>this.props.onAdd(this.state.device, this.state.limit)} color="primary">
                                 Scan ID
                             </Button>
                         </DialogActions>

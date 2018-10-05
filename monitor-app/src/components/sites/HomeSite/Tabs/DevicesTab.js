@@ -14,6 +14,7 @@ class DevicesTab extends Component {
 
     state = {
         open: false,
+        fakeList: {},
         deviceList: [
             {
                 name: 'shower downstairs',
@@ -52,6 +53,16 @@ class DevicesTab extends Component {
 
     handleClose = () => {
         this.setState({ open: false });
+    };
+
+    handleAdd = (name, limit) => {
+        this.state.fakeList[Math.random(1000)] = {
+            name: name,
+            limit: limit,
+            total: 0
+        }
+
+        //this.props.addDevice(name, limit)
     };
 
     redirectTo = (deviceId) => {
@@ -101,6 +112,16 @@ class DevicesTab extends Component {
                             total={this.props.devices[ device ].total}
                             limit={this.props.devices[ device ].limit}/> )
         }
+
+        for ( let device in this.state.fakeList ) {
+            deviceView.push(
+                <DeviceView key={device}
+                            loadDevice={()=>this.props.loadDevice('neer101', fromD, toD)}
+                            redirect={()=>this.redirectTo('neer101')}
+                            name={this.state.fakeList[ device ].name}
+                            total={this.state.fakeList[ device ].total}
+                            limit={this.state.fakeList[ device ].limit}/> )
+        }
         return (
             <MuiThemeProvider theme={theme}>
                 <div className="devices-tab">
@@ -113,7 +134,7 @@ class DevicesTab extends Component {
                         </div>
                     </Button>
                 </div>
-                <PopUp open={this.state.open} onClose={this.handleClose}/>
+                <PopUp onAdd={this.handleAdd} open={this.state.open} onClose={this.handleClose}/>
             </MuiThemeProvider>
         )
     }
@@ -129,7 +150,8 @@ const mapStateToProps = ( state ) => {
 const mapDispatchToProps = dispatch => {
     return {
         update: ( id ) => dispatch(actionTypes.getDevices(id)),
-        loadDevice: (id, fromD, toD) => dispatch(actionTypes.getDeviceData(id, fromD, toD))
+        loadDevice: (id, fromD, toD) => dispatch(actionTypes.getDeviceData(id, fromD, toD)),
+        addDevice: (name, limit) => dispatch(actionTypes.addDevice(name, limit))
     }
 }
 export default connect( mapStateToProps, mapDispatchToProps )( withRouter(DevicesTab ))

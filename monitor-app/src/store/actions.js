@@ -4,6 +4,8 @@ export const UPDATE_TOTAL = 'UPDATE_TOTAL';
 export const UPDATE_DEVICES = 'UPDATE_DEVICES';
 export const UPDATE_DEVICE_DATA = 'UPDATE_DEVICE_DATA';
 
+export const ADD_DEVICE = 'ADD_DEVICE';
+
 
 const serverAPI = 'http://35.198.75.55:8080/NeerMonitor/api/neer/'
 
@@ -56,12 +58,24 @@ export const getTotal = ( userId, date ) => {
     }
 }
 
+export const addDevice = ( name, limit ) => {
+    const id = Math.random(100000)
+    return {
+        type: ADD_DEVICE,
+        name: name,
+        limit: limit,
+        id: id
+    }
+}
+
 const updateDevices = ( deviceDict ) => {
     return {
         type: UPDATE_DEVICES,
         val: deviceDict
     }
 }
+
+
 
 export const getDevices = ( userId ) => {
     return ( dispatch ) => {

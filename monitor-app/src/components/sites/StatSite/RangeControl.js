@@ -53,10 +53,6 @@ class RangeControl extends React.Component {
         weightRange: 'WEEK',
     };
 
-    handleChange = prop => event => {
-        this.setState({ [prop]: event.target.value });
-    };
-
     render() {
         const { classes } = this.props;
 
@@ -67,8 +63,8 @@ class RangeControl extends React.Component {
                     select
                     label="Data Format"
                     className={classNames(classes.margin, classes.textField)}
-                    value={this.state.weightRange}
-                    onChange={this.handleChange('weightRange')}
+                    value={this.props.weightRange}
+                    onChange={(event)=>this.props.handle(event.target.value)}
                 >
                     {ranges.map(option => (
                         <MenuItem key={option.value} value={option.value}>
