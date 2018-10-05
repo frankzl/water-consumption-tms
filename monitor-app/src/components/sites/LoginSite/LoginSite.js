@@ -42,7 +42,7 @@ class LoginSite extends Component {
             this.state.interval = setInterval( () => {
                 this.props.update( uname, date )
                 this.props.updateDeviceTab( uname )
-            }, 1000 )
+            }, 10000 )
         }
     }
 

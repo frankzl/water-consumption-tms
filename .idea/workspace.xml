@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="458aafe1-4ef0-4cad-a401-adeb7ff23fb3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DevicesTab.js" afterPath="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DevicesTab.js" />
       <change beforePath="$PROJECT_DIR$/monitor-app/src/components/sites/LoginSite/LoginSite.js" afterPath="$PROJECT_DIR$/monitor-app/src/components/sites/LoginSite/LoginSite.js" />
-      <change beforePath="$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/BarChart.js" afterPath="$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/BarChart.js" />
-      <change beforePath="$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/RangeControl.js" afterPath="$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/RangeControl.js" />
-      <change beforePath="$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/StatSite.js" afterPath="$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/StatSite.js" />
-      <change beforePath="$PROJECT_DIR$/monitor-app/src/store/actions.js" afterPath="$PROJECT_DIR$/monitor-app/src/store/actions.js" />
-      <change beforePath="$PROJECT_DIR$/monitor-app/src/store/reducer.js" afterPath="$PROJECT_DIR$/monitor-app/src/store/reducer.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,41 +17,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DeviceView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DeviceView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginSite.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/LoginSite/LoginSite.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/monitor-app/src/store/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="91" column="48" lean-forward="false" selection-start-line="91" selection-start-column="48" selection-end-line="91" selection-end-column="48" />
+            <state relative-caret-position="0">
+              <caret line="60" column="7" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatSite.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StatSite.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/StatSite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+            <state relative-caret-position="238">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -65,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RangeControl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/RangeControl.js">
+      <file leaf-file-name="LoginSite.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/LoginSite/LoginSite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="57" selection-end-column="6" />
+            <state relative-caret-position="153">
+              <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -78,8 +52,38 @@
       <file leaf-file-name="reducer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/monitor-app/src/store/reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="850">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DevicesTab.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DevicesTab.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1887">
+              <caret line="122" column="75" lean-forward="false" selection-start-line="122" selection-start-column="75" selection-end-line="122" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatSite.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/StatSite.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PopUp.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/PopUp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="63" column="37" lean-forward="false" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -88,7 +92,7 @@
       <file leaf-file-name="BarChart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/BarChart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
+            <state relative-caret-position="170">
               <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
@@ -110,11 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logo</find>
-      <find>margi</find>
-      <find>percentage</find>
-      <find>consol</find>
-      <find>cons</find>
       <find>conso</find>
       <find>con</find>
       <find>props.liter</find>
@@ -140,6 +139,11 @@
       <find>fromD</find>
       <find>mo</find>
       <find>month</find>
+      <find>range</find>
+      <find>this.state.</find>
+      <find>handleChange</find>
+      <find>deviceId</find>
+      <find>ranges</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs</dir>
@@ -173,13 +177,11 @@
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/GoalView.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/PopUpAddGoal.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DeviceView.css" />
-        <option value="$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/StatSite.css" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/GoalsTab.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/Header/DeviceHeader.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/index.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/HomeSite.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/LoginSite/LoginSite.css" />
-        <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/PopUp.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/App.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/ScoreSite/score-site-content-wrapper.css" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/ScoreSite/ScoreView.js" />
@@ -190,13 +192,15 @@
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/GraphView/SegmentedProgressbar.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DeviceView.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/GraphView/GraphView.js" />
-        <option value="$PROJECT_DIR$/monitor-app/src/components/sites/LoginSite/LoginSite.js" />
-        <option value="$PROJECT_DIR$/monitor-app/src/store/reducer.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/BarChart.js" />
-        <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DevicesTab.js" />
-        <option value="$PROJECT_DIR$/monitor-app/src/store/actions.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/RangeControl.js" />
         <option value="$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/StatSite.js" />
+        <option value="$PROJECT_DIR$/monitor-app/src/store/reducer.js" />
+        <option value="$PROJECT_DIR$/monitor-app/src/store/actions.js" />
+        <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/PopUp.js" />
+        <option value="$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DevicesTab.js" />
+        <option value="$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/StatSite.css" />
+        <option value="$PROJECT_DIR$/monitor-app/src/components/sites/LoginSite/LoginSite.js" />
       </list>
     </option>
   </component>
@@ -421,24 +425,26 @@
       <workItem from="1538606901563" duration="7943000" />
       <workItem from="1538636420149" duration="47982000" />
       <workItem from="1538723100957" duration="2577000" />
-      <workItem from="1538727683084" duration="3489000" />
+      <workItem from="1538727683084" duration="7915000" />
+      <workItem from="1538745277945" duration="973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132086000" />
+    <option name="totallyTimeSpent" value="137485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="-13" width="1360" height="778" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21312684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19469027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26793557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26793557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -644,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/StatSite.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DevicesTab.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -669,13 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/PopUp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="62" column="39" lean-forward="true" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -755,29 +747,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="59" column="50" lean-forward="false" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DeviceView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="65">
           <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/LoginSite/LoginSite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/BarChart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
+        <state relative-caret-position="170">
           <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -785,45 +768,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DevicesTab.js">
+    <entry file="file://$PROJECT_DIR$/monitor-app/src/store/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="60" column="7" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/monitor-app/src/store/actions.js">
+    <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/PopUp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="91" column="48" lean-forward="false" selection-start-line="91" selection-start-column="48" selection-end-line="91" selection-end-column="48" />
+        <state relative-caret-position="918">
+          <caret line="63" column="37" lean-forward="false" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/monitor-app/src/store/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="850">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/HomeSite/Tabs/DevicesTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1887">
+          <caret line="122" column="75" lean-forward="false" selection-start-line="122" selection-start-column="75" selection-end-line="122" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/StatSite.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/RangeControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="57" selection-end-column="6" />
+        <state relative-caret-position="68">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/StatSite/StatSite.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="238">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitor-app/src/components/sites/LoginSite/LoginSite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
